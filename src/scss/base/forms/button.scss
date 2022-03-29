@@ -2,10 +2,33 @@
 // Снипет (HTML): btn
 
 .button {
-	display: inline-flex;
-	padding: 0px 0px;
+	display: inline-block;
+	padding: 15px 50px;
+	color: $white;
+	background: $Button;
+	border-radius: 5px;
+	font-family: 'Poppins';
+	font-weight: 500;
+	line-height: math.div(30, 20);
+	transition: background-color 0.3s ease 0s;
+	@include adaptiveValue('font-size', 20, 18);
+	&__transparent {
+		padding: 15px 55px;
+		color: $mainColor;
+		background: $white;
+		border: 2px solid $Button;
+		font-weight: 400;
+		line-height: math.div(36, 24);
+		@include adaptiveValue('font-size', 24, 22);
+		@media (max-width: $mobile) {
+			padding: 12px 45px;
+		}
+	}
+
 	@media (any-hover: hover) {
 		&:hover {
+			background: $Button;
+			color: $white;
 		}
 	}
 	&._fw {
