@@ -51,10 +51,28 @@
 [class*='-column'] {
 	flex: 1 1 100%;
 	padding: 0 15px;
-	
+
 	// @media (min-width: $mobile) {
 	// 	flex: 1 1 50%;
 	// }
+}
+[class*='grid'] {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+}
+
+[class*='grid-flex-end'] {
+	display: grid;
+	@include adaptiveValue("gap",30 ,20 );
+
+	@media (min-width: $mobile) {
+		grid-template-columns: repeat(12, 1fr);
+		justify-items: end;
+	}
+	@media (max-width: $mobileSmall) {
+		grid-template-columns: repeat(6, 60px);
+	}
+
 }
 
 // Шаблоны (заготовки)

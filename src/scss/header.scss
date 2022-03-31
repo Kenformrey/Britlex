@@ -16,12 +16,13 @@
 
 	&__logo {
 		flex: 1 0 100px;
+	}
+	.logo {
 		font-weight: 400;
 		font-size: 36px;
 		line-height: math.div(54, 36);
 		@include adaptiveValue('font-size', 36, 30);
 	}
-
 	// .header__menu
 
 	&__menu {
@@ -55,7 +56,7 @@
 	}
 
 	// .menu__link
-// ! Подумать как сделать этот сниппет в scss или шаблон для ссылок
+	// ! Подумать как сделать этот сниппет в scss или шаблон для ссылок
 	&__link {
 		position: relative;
 
@@ -65,7 +66,7 @@
 		line-height: math.div(30, 20);
 		@include adaptiveValue('font-size', 20, 18);
 
-		// ! Подумать как сделать этот сниппет в scss или шаблон для ссылок 
+		// ! Подумать как сделать этот сниппет в scss или шаблон для ссылок
 		@media (min-width: $mobile) {
 			padding: 20px 0;
 			&:after {
@@ -86,7 +87,6 @@
 				}
 			}
 		}
-
 	}
 }
 

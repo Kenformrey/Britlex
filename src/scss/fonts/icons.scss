@@ -1,5 +1,5 @@
 %ic {
-	font-family: "icons";
+	font-family: 'icons';
 	font-style: normal;
 	font-weight: normal;
 	font-variant: normal;
@@ -8,7 +8,7 @@
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
-[class*="_icon-"] {
+[class*='_icon-'] {
 	&:before {
 		@extend %ic;
 		display: block;
@@ -16,7 +16,13 @@
 }
 
 ._icon-Lamp:before {
-  content: "\e902";
-	font-size: rem(50);
-	color:red;
+	content: '\e902';
+	display: none;
+	@media (min-width: 767.98px) {
+		display: block;
+		font-size: 85px;
+	}
+	@media (max-width: 1000px) {
+		font-size: 70px;
+	}
 }

@@ -14,21 +14,43 @@
 	@include adaptiveValue('font-size', 20, 18);
 	&__transparent {
 		padding: 15px 55px;
+		@include adaptiveValue('padding-top', 15, 12, 1000, 768, 1);
+		@include adaptiveValue('padding-bottom', 15, 12, 1000, 768, 1);
+		@include adaptiveValue('padding-right', 55, 40, 1000, 768, 1);
+		@include adaptiveValue('padding-left', 55, 40, 1000, 768, 1);
 		color: $mainColor;
 		background: $white;
 		border: 2px solid $Button;
+		transition: background-color 0.3s ease 0s;
 		font-weight: 400;
 		line-height: math.div(36, 24);
 		@include adaptiveValue('font-size', 24, 22);
 		@media (max-width: $mobile) {
 			padding: 12px 45px;
 		}
+		@media (min-width: $pc) {
+			&:hover {
+				background: $Button;
+				color: $white;
+			}
+		}
+	}
+	&__block-text {
+		border-radius: 15px;
+		font-weight: 400;
+		font-size: 36px;
+		line-height: math.div(54, 36);
+		@include adaptiveValue('font-size', 36, 18, 1125, 768, 1);
+		@include adaptiveValue('padding-top', 32, 19, 1125, 768, 1);
+		@include adaptiveValue('padding-bottom', 32, 19, 1125, 768, 1);
+		@include adaptiveValue('padding-right', 118, 67, 1125, 768, 1);
+		@include adaptiveValue('padding-left', 118, 67, 1125, 768, 1);
 	}
 
 	@media (any-hover: hover) {
 		&:hover {
-			background: $Button;
-			color: $white;
+			// color: $mainColor;
+			// background: transparent;
 		}
 	}
 	&._fw {
