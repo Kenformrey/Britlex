@@ -11,7 +11,15 @@
 	font-weight: 500;
 	line-height: math.div(30, 20);
 	transition: background-color 0.4s ease 0s;
+	border: 2px solid transparent;
 	@include adaptiveValue('font-size', 20, 18);
+	@media (min-width: $pc) {
+		&:hover {
+			color: $mainColor;
+			background: $white;
+			border: 2px solid $Button;
+		}
+	}
 	&__transparent {
 		color: $mainColor;
 		background: $white;
@@ -37,19 +45,12 @@
 		border-radius: 15px;
 		font-weight: 400;
 		line-height: math.div(54, 36);
-		border: 2px solid transparent;
 		@include adaptiveValue('font-size', 36, 15);
 		@include adaptiveValue('padding-top', 32, 20, 1125, 768, 1);
 		@include adaptiveValue('padding-bottom', 32, 20, 1125, 768, 1);
 		@include adaptiveValue('padding-right', 118, 65, 1125, 768, 1);
 		@include adaptiveValue('padding-left', 118, 65, 1125, 768, 1);
-		@media (min-width: $pc) {
-			&:hover {
-				color: $mainColor;
-				background: $white;
-				border: 2px solid $Button;
-			}
-		}
+
 		@media (max-width: $mobile) {
 			padding: 0px 100px;
 			@include adaptiveValue('padding-top', 24, 19);
