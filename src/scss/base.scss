@@ -63,14 +63,11 @@
 
 [class*='grid-flex-end'] {
 	display: grid;
-	@include adaptiveValue("gap",30 ,20 );
+	@include adaptiveValue("gap",30 ,15 );
 
 	@media (min-width: $mobile) {
 		grid-template-columns: repeat(12, 1fr);
 		justify-items: end;
-	}
-	@media (max-width: $mobileSmall) {
-		grid-template-columns: repeat(6, 60px);
 	}
 
 }
