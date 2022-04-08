@@ -95,7 +95,7 @@
 	// .skills__title
 
 	&__title {
-		@include adaptiveValue('margin-bottom', 90, 60);
+		@include adaptiveValue('margin-bottom', 90, 30);
 	}
 
 	// .skills__content
@@ -126,21 +126,44 @@
 	// .cards-items__item
 
 	&__item {
-		grid-column: 4 span;
-		grid-row: 18 span;
-		//!fffffffffffffffffffffffffffffffff
-		padding: 30px 40px;
+
+
 		background: $bg;
 		&:first-child {
-			padding: 70px 45px 30px;
-			grid-row: 29 span;
+			@media (min-width: $tablet) {
+				padding: 70px 30px 30px;
+				grid-row: 29 span;
+			}
+			@media (max-width: $tablet) {
+				// grid-row: 24 span;
+			}
 		}
 		&:last-child {
-			grid-column: 8 span;
-			grid-row: 11 span;
-			display: flex;
-			flex-direction: row-reverse;
+			@media (min-width: $tablet) {
+				grid-column: 8 span;
+				display: flex;
+				flex-direction: row-reverse;
+				grid-row: 11 span;
+			}
 		}
+		@media (max-width: $mobile) {
+			grid-column: 12 span;
+			grid-row: 18 span;
+		}
+		@media (min-width: $mobile) {
+			grid-column: 6 span;
+			grid-row: 21 span;
+		}
+		@media (min-width: $tablet) {
+			grid-column: 4 span;
+			grid-row: 18 span;
+		}
+	}
+	&__content {
+		@include adaptiveValue('padding-top', 30, 15);
+		@include adaptiveValue('padding-bottom', 30, 15);
+		@include adaptiveValue('padding-right', 40, 20);
+		@include adaptiveValue('padding-left', 40, 20);
 	}
 }
 .item {
@@ -152,12 +175,13 @@
 	// .item__image-people
 
 	&__image.people {
-		@include adaptiveValue('margin-bottom', 50, 40);
+		@media (min-width: $tablet) {
+			@include adaptiveValue('margin-bottom', 50, 40);
+		}
 		svg {
-			@media (min-width: $mobile) {
-				@include adaptiveValue('width', 350, 214, 1150, 768, 1);
-				@include adaptiveValue('height', 310, 214, 1150, 768, 1);
-			}
+			@include adaptiveValue('width', 350, 214);
+			@include adaptiveValue('height', 310, 214);
+
 			// @media (max-width: $mobile) {
 			// 	@include adaptiveValue('height', 485, 423, 768, 574, 1);
 			// }
@@ -170,10 +194,9 @@
 	&__image.typewriter {
 		text-align-last: right;
 		svg {
-			@media (min-width: $mobile) {
-				@include adaptiveValue('width', 260, 200, 1150, 768, 1);
-				@include adaptiveValue('height', 230, 200, 1150, 768, 1);
-			}
+			@include adaptiveValue('width', 260, 200);
+			@include adaptiveValue('height', 230, 200);
+
 			// @media (max-width: $mobile) {
 			// 	@include adaptiveValue('height', 485, 423, 768, 574, 1);
 			// }
@@ -186,10 +209,9 @@
 
 	&__image.library {
 		svg {
-			@media (min-width: $mobile) {
-				@include adaptiveValue('width', 280, 170, 1150, 768, 1);
-				@include adaptiveValue('height', 230, 150, 1150, 768, 1);
-			}
+			@include adaptiveValue('width', 280, 170);
+			@include adaptiveValue('height', 230, 150);
+
 			// @media (max-width: $mobile) {
 			// 	@include adaptiveValue('height', 485, 423, 768, 574, 1);
 			// }
@@ -202,10 +224,9 @@
 
 	&__image.music {
 		svg {
-			@media (min-width: $mobile) {
-				@include adaptiveValue('width', 360, 220, 1150, 768, 1);
-				@include adaptiveValue('height', 210, 130, 1150, 768, 1);
-			}
+			@include adaptiveValue('width', 360, 220);
+			@include adaptiveValue('height', 210, 130);
+
 			// @media (max-width: $mobile) {
 			// 	@include adaptiveValue('height', 485, 423, 768, 574, 1);
 			// }
