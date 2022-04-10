@@ -112,7 +112,7 @@
 
 	&__cards-items {
 		grid-template-rows: repeat(32, 13px);
-		gap: 18px;
+		gap: 13px;
 	}
 }
 
@@ -124,26 +124,30 @@
 }
 .cards-items {
 	// .cards-items__item
-
 	&__item {
-
-
 		background: $bg;
+
 		&:first-child {
 			@media (min-width: $tablet) {
-				padding: 70px 30px 30px;
-				grid-row: 29 span;
+				grid-row: 33 span;
 			}
 			@media (max-width: $tablet) {
-				// grid-row: 24 span;
+				grid-row: 27 span;
 			}
 		}
 		&:last-child {
+			grid-row: 12 span;
+			.cards-items__content {
+				@media (min-width: $tablet) {
+					display: flex;
+				}
+				& .item__inner {
+					max-width: 350px;
+				}
+			}
+
 			@media (min-width: $tablet) {
 				grid-column: 8 span;
-				display: flex;
-				flex-direction: row-reverse;
-				grid-row: 11 span;
 			}
 		}
 		@media (max-width: $mobile) {
@@ -156,9 +160,10 @@
 		}
 		@media (min-width: $tablet) {
 			grid-column: 4 span;
-			grid-row: 18 span;
+			grid-row: 21 span;
 		}
 	}
+
 	&__content {
 		@include adaptiveValue('padding-top', 30, 15);
 		@include adaptiveValue('padding-bottom', 30, 15);
@@ -168,73 +173,43 @@
 }
 .item {
 	// .item__image
-
 	&__image {
+		svg {
+			max-width: 100%;
+		}
 	}
-
-	// .item__image-people
-
 	&__image.people {
 		@media (min-width: $tablet) {
 			@include adaptiveValue('margin-bottom', 50, 40);
 		}
 		svg {
-			@include adaptiveValue('width', 350, 214);
-			@include adaptiveValue('height', 310, 214);
-
-			// @media (max-width: $mobile) {
-			// 	@include adaptiveValue('height', 485, 423, 768, 574, 1);
-			// }
-			// @media (max-width: $mobileSmall) {
-			// 	@include adaptiveValue('width', 546, 270, 574, 320, 1);
-			// 	@include adaptiveValue('height', 424, 220, 574, 320, 1);
-			// }
+			width: 350px;
+			height: 310px;
 		}
 	}
 	&__image.typewriter {
 		text-align-last: right;
 		svg {
-			@include adaptiveValue('width', 260, 200);
-			@include adaptiveValue('height', 230, 200);
-
-			// @media (max-width: $mobile) {
-			// 	@include adaptiveValue('height', 485, 423, 768, 574, 1);
-			// }
-			// @media (max-width: $mobileSmall) {
-			// 	@include adaptiveValue('width', 546, 270, 574, 320, 1);
-			// 	@include adaptiveValue('height', 424, 220, 574, 320, 1);
-			// }
+			width: 260px;
+			height: 230px;
 		}
 	}
 
 	&__image.library {
 		svg {
-			@include adaptiveValue('width', 280, 170);
-			@include adaptiveValue('height', 230, 150);
-
-			// @media (max-width: $mobile) {
-			// 	@include adaptiveValue('height', 485, 423, 768, 574, 1);
-			// }
-			// @media (max-width: $mobileSmall) {
-			// 	@include adaptiveValue('width', 546, 270, 574, 320, 1);
-			// 	@include adaptiveValue('height', 424, 220, 574, 320, 1);
-			// }
+			width: 280px;
+			height: 230px;
+		}
+	}
+	&__image.music {
+		order: 2;
+		svg {
+			width: 360px;
+			height: 210px;
 		}
 	}
 
-	&__image.music {
-		svg {
-			@include adaptiveValue('width', 360, 220);
-			@include adaptiveValue('height', 210, 130);
-
-			// @media (max-width: $mobile) {
-			// 	@include adaptiveValue('height', 485, 423, 768, 574, 1);
-			// }
-			// @media (max-width: $mobileSmall) {
-			// 	@include adaptiveValue('width', 546, 270, 574, 320, 1);
-			// 	@include adaptiveValue('height', 424, 220, 574, 320, 1);
-			// }
-		}
+	&__inner {
 	}
 	// .item__title
 
