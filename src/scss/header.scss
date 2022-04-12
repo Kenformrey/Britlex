@@ -5,6 +5,23 @@
 	top: 0;
 	left: 0;
 	z-index: 50;
+	&._header-scroll {
+		position: fixed;
+		top: -200%;
+		background: rgba(0, 0, 0, 0.75);
+	}
+	&._header-show {
+		transition: top 0.5s ease 0s;
+		top: 0;
+		.menu__link,
+		.header__logo a {
+				color: $white;
+		}
+		.menu__link::after {
+			background: $white;
+		}
+	}
+
 	// .header__container
 	&__container {
 		display: flex;
@@ -59,7 +76,6 @@
 	// ! Подумать как сделать этот сниппет в scss или шаблон для ссылок
 	&__link {
 		position: relative;
-
 		color: #263238;
 		font-weight: 500;
 		font-size: 20px;
