@@ -50,12 +50,9 @@
 	margin: 0 -15px;
 }
 [class*='-column'] {
-	flex: 1 1 100%;
+	flex: 1 1 50%;
 	padding: 0 15px;
 
-	// @media (min-width: $mobile) {
-	// 	flex: 1 1 50%;
-	// }
 }
 [class*='grid'] {
 	display: grid;

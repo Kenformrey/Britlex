@@ -83,9 +83,9 @@
 	}
 }
 
-//====================================================================================================
+//* GET END ====================================================================================================
 
-//* skills STARTED==========================================
+//* Skills STARTED==========================================
 .skills {
 	// .skills__container
 
@@ -234,5 +234,100 @@
 		}
 	}
 }
-.button {
+
+//* skills END==========================================
+
+//* About STARTED==========================================
+.about {
+	// .about__container
+	@include adaptiveValue('padding-top', 180, 80);
+	@include adaptiveValue('padding-bottom', 250, 100);
+
+	&__container {
+	}
+
+	// .about__content
+
+	&__content {
+	}
+
+	// .about__row
+
+	&__row {
+		@media (max-width: $mobile) {
+			display: grid;
+			.about__column-info {
+				order: 2;
+			}
+			.about__column-img {
+				order: 1;
+				text-align: center;
+			}
+		}
+	}
+
+	// .about__item-info
+
+	&__item-info {
+	}
+
+	// .about__image
+
+	&__image {
+		flex: 1 1 500px;
+		svg {
+			width: 500px;
+			@include adaptiveValue('height', 500, 280);
+		}
+		@media (max-width: $mobile) {
+			order: 1;
+		}
+	}
+
+	// .about__svg
+
+	&__svg {
+	}
 }
+.item-info {
+	// .item-info__title
+
+	&__title {
+		@include adaptiveValue('margin-bottom', 20, 10);
+	}
+
+	// .item-info__text
+
+	&__text {
+		@include adaptiveValue('margin-bottom', 40, 20);
+	}
+
+	// .item-info__numbers
+
+	&__numbers {
+	}
+	@media (max-width: $mobile) {
+		order: 2;
+	}
+}
+
+.info-numbers {
+	// .info-numbers__items
+	&__items {
+	}
+}
+.numbers-items {
+	display: flex;
+	justify-content: space-between;
+}
+.numbers-item {
+	// .numbers-item__digit
+	flex: 1 1 100%;
+
+	&__digit {
+		text-align: center;
+		// flex: 1 0 33.333%;
+	}
+}
+
+//* About END ==========================================

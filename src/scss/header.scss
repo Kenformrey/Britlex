@@ -10,15 +10,35 @@
 		top: -200%;
 		background: rgba(0, 0, 0, 0.75);
 	}
+
+	//! code review this !!
 	&._header-show {
 		transition: top 0.5s ease 0s;
 		top: 0;
-		.menu__link,
+		//! code review this !!
 		.header__logo a {
-				color: $white;
+			color: $white;
 		}
-		.menu__link::after {
-			background: $white;
+		.icon-menu {
+			span,
+			&::before,
+			&::after {
+				background-color: $white;
+			}
+			.menu-open & {
+				&::before,
+				&::after {
+					background-color: #000;
+				}
+			}
+		}
+		@media (min-width: $mobile) {
+			.menu__link {
+				color: $white;
+			}
+			.menu__link::after {
+				background: $white;
+			}
 		}
 	}
 
@@ -183,6 +203,8 @@
 		background: $white;
 		transition: 0.4s ease 0s;
 		z-index: 4;
+	}
+	._header-show {
 	}
 	.menu-open .header__menu {
 		left: 0;

@@ -2,11 +2,17 @@
 // заголовок
 
 .title {
-	color:$mainColor;
+	color: $mainColor;
 	font-weight: 600;
-	line-height: math.div(80 ,48 );
-	@include adaptiveValue("font-size",48 ,24 );
-	&-center{
+	line-height: math.div(80, 48);
+	@include adaptiveValue('font-size', 48, 24);
+	&-center {
 		text-align: center;
 	}
+}
+.text20 {
+	font-weight: 400;
+	line-height: math.div(30, 20);
+	@include adaptiveValue('font-size', 20, 13);
+	color: $primaryTextColor;
 }
