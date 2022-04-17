@@ -9,6 +9,12 @@
 	&-center {
 		text-align: center;
 	}
+	&-price {
+		font-weight: 600;
+		color: $bold;
+		line-height: math.div(48, 30);
+		@include adaptiveValue('font-size', 30, 18);
+	}
 }
 .text20 {
 	font-weight: 400;

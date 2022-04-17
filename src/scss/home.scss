@@ -82,7 +82,6 @@
 		@include adaptiveValue('margin-bottom', 60, 15);
 	}
 }
-
 //* GET END ====================================================================================================
 
 //* Skills STARTED==========================================
@@ -234,7 +233,6 @@
 		}
 	}
 }
-
 //* skills END==========================================
 
 //* About STARTED==========================================
@@ -260,7 +258,6 @@
 				order: 2;
 			}
 			.about__column-img {
-				order: 1;
 				text-align: center;
 			}
 		}
@@ -280,7 +277,6 @@
 			@include adaptiveValue('height', 500, 280);
 		}
 		@media (max-width: $mobile) {
-			order: 1;
 		}
 	}
 
@@ -307,7 +303,7 @@
 	&__numbers {
 	}
 	@media (max-width: $mobile) {
-		order: 2;
+		order: 1;
 	}
 }
 
@@ -317,17 +313,27 @@
 	}
 }
 .numbers-items {
-	display: flex;
-	justify-content: space-between;
-}
-.numbers-item {
-	// .numbers-item__digit
-	flex: 1 1 100%;
-
-	&__digit {
-		text-align: center;
-		// flex: 1 0 33.333%;
+	@media (min-width: $mobileSmall) {
+		display: flex;
+		justify-content: space-between;
 	}
 }
+.numbers-item {
+	flex: 1 1 100%;
 
+	// .numbers-item__digit
+	&__digit {
+		color: $number;	
+		text-align: center;
+		@media (max-width: $mobileSmall) {
+			&:not(:last-child) {
+				@include adaptiveValue('margin-bottom', 50, 40);
+			}
+		}
+	}
+}
 //* About END ==========================================
+
+//* Price STARTED==========================================
+
+//* Price END ==========================================

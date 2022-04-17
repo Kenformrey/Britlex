@@ -22,7 +22,7 @@
 // @import "base/fullscreen";
 
 // Стили для липкого блока
-@import "base/sticky";
+@import 'base/sticky';
 
 // Стили для отзывчивых картинок (IBG)
 // Сниппет (HTML): ibg (div c картинкой и классами)
@@ -49,25 +49,26 @@
 	flex-wrap: wrap;
 	margin: 0 -15px;
 }
-[class*='-column'] {
+[class*='-column50'] {
 	flex: 1 1 50%;
-	padding: 0 15px;
-
+	padding: 10px 15px;
+}
+[class*='-column33'] {
+	flex: 1 1 33%;
+	padding: 10px 15px;
 }
 [class*='grid'] {
 	display: grid;
 	grid-template-columns: repeat(12, 1fr);
-
 }
 
 [class*='grid-flex-end'] {
 	display: grid;
-	@include adaptiveValue("gap",30 ,15 );
+	@include adaptiveValue('gap', 30, 15);
 	@media (min-width: $mobile) {
 		grid-template-columns: repeat(12, 1fr);
 		justify-items: end;
 	}
-
 }
 
 // Шаблоны (заготовки)
