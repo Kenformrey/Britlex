@@ -323,7 +323,7 @@
 
 	// .numbers-item__digit
 	&__digit {
-		color: $number;	
+		color: $number;
 		text-align: center;
 		@media (max-width: $mobileSmall) {
 			&:not(:last-child) {
@@ -335,5 +335,133 @@
 //* About END ==========================================
 
 //* Price STARTED==========================================
+
+.price {
+	// .price__container
+
+	&__container {
+	}
+
+	// .price__title
+
+	&__title {
+	}
+
+	// .price__content
+
+	&__content {
+	}
+
+	// .price__row
+
+	&__row {
+	}
+
+	// .price__column
+
+	&__column {
+		display: flex;
+		@media (max-width: $tablet) {
+			flex: 1 1 50%;
+		}
+		@media (max-width: $mobile) {
+			flex: 1 1 100%;
+			justify-content: center;
+			text-align: center;
+		}
+	}
+
+	// .price__column-item
+
+	&__column-item {
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+.price-item {
+	// .price-item__svg
+	svg {
+		max-width: 100%;
+	}
+	&__svg {
+		@include adaptiveValue('margin-bottom', 40, 20);
+		&.price__svg-1 {
+			svg {
+				width: 280px;
+				height: 280px;
+			}
+		}
+		&.price__svg-2 {
+			svg {
+				width: 380px;
+				height: 280px;
+			}
+		}
+		&.price__svg-3 {
+			svg {
+				width: 320px;
+				height: 280px;
+			}
+		}
+	}
+
+	// .price-item__title
+
+	&__title {
+		@include adaptiveValue('margin-bottom', 20, 15);
+	}
+
+	// .price-item__text
+
+	&__text {
+		flex: 1 1 auto;
+		@include adaptiveValue('margin-bottom', 20, 10);
+	}
+
+	// .price-item__subscription
+
+	&__subscription {
+	}
+}
+.title-price {
+}
+
+.item-subscription {
+	// .item-subscription__price
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 10px 20px;
+	background: $priceBG;
+	border-radius: 5px;
+	transition: background-color 0.4s ease 0s;
+	&__price {
+		color: $bold;
+		margin-right: 10px;
+		font-weight: 400;
+		line-height: math.div(45, 30);
+		@include adaptiveValue('font-size', 30, 18);
+	}
+	// .item-subscription__month
+
+	&__month {
+		color: $perMonth;
+		font-weight: 400;
+		line-height: math.div(27, 18);
+		@include adaptiveValue('font-size', 18, 14);
+	}
+	@media (any-hover: hover) {
+		&:hover {
+			color: $white;
+			.item-subscription__price {
+				color: $white;
+			}
+			.item-subscription__month {
+				color: $white;
+			}
+		}
+	}
+}
 
 //* Price END ==========================================

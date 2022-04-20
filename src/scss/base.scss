@@ -49,6 +49,7 @@
 	flex-wrap: wrap;
 	margin: 0 -15px;
 }
+
 [class*='-column50'] {
 	flex: 1 1 50%;
 	padding: 10px 15px;
@@ -57,6 +58,7 @@
 	flex: 1 1 33%;
 	padding: 10px 15px;
 }
+
 [class*='grid'] {
 	display: grid;
 	grid-template-columns: repeat(12, 1fr);
@@ -74,6 +76,7 @@
 // Шаблоны (заготовки)
 // @extend %имя шаблона;
 // Сниппет (SCSS): ex
+
 
 // Счетчик для списка
 %listCounter {
