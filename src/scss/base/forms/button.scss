@@ -67,6 +67,19 @@
 			}
 		}
 	}
+	&__contacts {	
+		@media (max-width:$mobileSmall){
+			 width: 100%; 
+		}
+		border-radius: 10px;
+		font-weight: 500;
+		line-height: math.div(30, 20);
+		@include adaptiveValue('font-size', 20, 18);
+		@include adaptiveValue('padding-top',25, 15);
+		@include adaptiveValue('padding-bottom', 25, 15);
+		@include adaptiveValue('padding-right', 80, 40, 1200, 768, 1);
+		@include adaptiveValue('padding-left', 80, 40, 1200, 768, 1);
+	}
 	@media (any-hover: hover) {
 		&:hover {
 		}

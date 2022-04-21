@@ -239,7 +239,7 @@
 .about {
 	// .about__container
 	@include adaptiveValue('padding-top', 180, 80);
-	@include adaptiveValue('padding-bottom', 250, 100);
+	@include adaptiveValue('padding-bottom', 250, 80);
 
 	&__container {
 	}
@@ -429,9 +429,14 @@
 
 .item-subscription {
 	// .item-subscription__price
+	@media (min-width: $mobile) {
+		max-width: 260px;
+	}
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	justify-items: center;
+	text-align: center;
 	padding: 10px 20px;
 	background: $priceBG;
 	border-radius: 5px;
@@ -465,3 +470,79 @@
 }
 
 //* Price END ==========================================
+
+//* Contacts STARTED==========================================
+
+.contacts {
+	// .contacts__container
+	@include adaptiveValue('padding-top', 230, 100);
+	@include adaptiveValue('padding-bottom', 130, 100);
+	&__container {
+	}
+
+	// .contacts__content
+
+	&__content {
+		display: flex;
+	}
+
+	// .contacts__row
+
+	&__row {
+	}
+
+	// .contacts__column
+
+	&__column {
+		@media (max-width: $tablet) {
+			flex: 1 1 100%;
+		}
+	}
+
+	// .contacts__svg-1
+
+	&__svg-1 {
+		@media (max-width: $tablet) {
+			text-align: center;
+		}
+		svg {
+			width: 450px;
+			height: 400px;
+		}
+	}
+}
+
+.contacts-item {
+	// .contacts-item__email
+
+	&__email {
+	}
+}
+.email-item {
+	// .email-item__title
+	&__title {
+		@include adaptiveValue('margin-bottom', 40, 20);
+	}
+
+	// .email-item__text
+
+	&__text {
+		@include adaptiveValue('margin-bottom', 50, 30);
+	}
+
+	// .email-item__form
+
+	&__form {
+		@media (min-width: $mobileSmall) {
+			display: flex;
+		}
+	}
+}
+
+.input {
+	@media (min-width: $tablet) {
+		margin-right: 12px;
+	}
+}
+
+//* Contacts END ==========================================
