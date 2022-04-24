@@ -1,4 +1,10 @@
 //====================================================================================================
+.logo {
+	font-weight: 400;
+	font-size: 36px;
+	line-height: math.div(54, 36);
+	@include adaptiveValue('font-size', 36, 30);
+}
 .header {
 	position: absolute;
 	width: 100%;
@@ -54,12 +60,7 @@
 	&__logo {
 		flex: 1 0 100px;
 	}
-	.logo {
-		font-weight: 400;
-		font-size: 36px;
-		line-height: math.div(54, 36);
-		@include adaptiveValue('font-size', 36, 30);
-	}
+
 	// .header__menu
 
 	&__menu {
