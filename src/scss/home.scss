@@ -7,7 +7,7 @@
 	}
 	@media (min-width: $mobileSmall) {
 		@include adaptiveValue('padding-top', 225, 152, 1000, 768, 1);
-		@include adaptiveValue('padding-bottom', 100, 70, 1000, 768, 1);
+		@include adaptiveValue('padding-bottom', 150, 70, 1000, 768, 1);
 	}
 
 	// .get-started__content
@@ -94,6 +94,7 @@
 	// .skills__title
 
 	&__title {
+		@extend %animation1;
 		@include adaptiveValue('margin-bottom', 70, 30);
 	}
 
@@ -125,7 +126,7 @@
 	// .cards-items__item
 	&__item {
 		background: $bg;
-
+		@extend %animation1;
 		&:first-child {
 			@media (min-width: $tablet) {
 				grid-row: 33 span;
@@ -252,8 +253,12 @@
 	// .about__row
 
 	&__row {
+		.-column50 {
+			@extend %animation2;
+		}
 		@media (max-width: $mobile) {
 			display: grid;
+
 			.about__column-info {
 				order: 2;
 			}
@@ -295,6 +300,9 @@
 	// .item-info__text
 
 	&__text {
+		@media (max-width:$mobile){
+			 text-align: center; 
+		}
 		@include adaptiveValue('margin-bottom', 40, 20);
 	}
 
@@ -345,6 +353,8 @@
 	// .price__title
 
 	&__title {
+			@extend %animation1;
+
 	}
 
 	// .price__content
@@ -360,6 +370,7 @@
 	// .price__column
 
 	&__column {
+		@extend %animation1;
 		display: flex;
 		@media (max-width: $tablet) {
 			flex: 1 1 50%;
@@ -494,6 +505,7 @@
 	// .contacts__column
 
 	&__column {
+		@extend %animation2;
 		@media (max-width: $tablet) {
 			flex: 1 1 100%;
 		}

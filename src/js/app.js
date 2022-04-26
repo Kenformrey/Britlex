@@ -85,7 +85,6 @@ import * as flsForms from "./files/forms/forms.js";
 /* Oтправка формы */
 /* Документация: https://template.fls.guru/template-docs/rabota-s-formami.html */
 // flsForms.formSubmit();
-
 /* Модуль формы "колличество" */
 // flsForms.formQuantity();
 
@@ -154,7 +153,7 @@ import * as flsForms from "./files/forms/forms.js";
 // Наблюдатель за объектами c атрибутом data-watch
 // Документация: https://template.fls.guru/template-docs/modul-nabljudatel-za-poyavleniem-elementa-pri-skrolle.html
 // Сниппет(HTML):
-// import './libs/watcher.js'
+import './libs/watcher.js'
 
 // Функции работы скроллом
 import * as flsScroll from "./files/scroll/scroll.js";
@@ -168,7 +167,7 @@ flsScroll.pageNavigation();
 flsScroll.headerScroll();
 
 // Функционал липкого блока
-flsScroll.stickyBlock();
+// flsScroll.stickyBlock();
 
 // ========================================================================================================================================================================================================================================================
 // Галерея ========================================================================================================================================================================================================================================================
