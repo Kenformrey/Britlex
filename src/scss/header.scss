@@ -14,13 +14,18 @@
 	&._header-scroll {
 		position: fixed;
 		top: -200%;
-		background: rgba(0, 0, 0, 0.75);
+		background: $Button;
+		border-bottom: 1px solid $primaryTextColor;
 	}
 
 	//! code review this !!
 	&._header-show {
 		transition: top 0.5s ease 0s;
 		top: 0;
+		.button__transparent {
+			border: 1px solid $white;
+
+		}
 		//! code review this !!
 		.header__logo a {
 			color: $white;
@@ -58,7 +63,7 @@
 	// .header__logo
 
 	&__logo {
-		flex: 1 0 100px;
+		flex: 1 0 105px;
 	}
 
 	// .header__menu
@@ -82,9 +87,10 @@
 	display: flex;
 	justify-content: center;
 
-	// .menu__listY
+	// .menu__list
 	&__list {
 		display: flex;
+		flex-wrap: wrap;
 	}
 
 	// .menu__item
